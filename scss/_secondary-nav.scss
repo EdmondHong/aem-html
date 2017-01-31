@@ -1,0 +1,126 @@
+nav.secondary {
+    
+    @media screen and (min-width: $screen-md-min) {
+        border-top: 1px solid #dbe1e4;
+    }
+    
+    @media screen and (min-width: $screen-lg-min) {
+        width: 240px;
+    }
+    
+    .toggle {
+        font-family: $mark-pro-bold;
+        background-image: url(../img/icon-arrow-up.svg);
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        padding-left: 40px;
+        
+        &.collapsed{
+            background-image: url(../img/icon-arrow-down.svg);
+        }
+    }
+    
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li {
+            
+            // second level
+            > ul li {
+                
+                a {
+                    padding-left: 35px;
+                    
+                    &:before {
+                        content: '\25cb'; // blue circle
+                        display: block;
+                        position: relative;
+                        max-width: 0;
+                        max-height: 0;
+                        left: -21px;
+                        top: 7px;
+                        color: $alternate-blue;
+                        font-size: 8px;
+                        
+                        @media screen and (min-width: $screen-md-min) {
+                            top: 4px;
+                        }
+                    }
+                    
+                    &.active:before {
+                        content: '\25cf'; // blue disc
+                    }
+                }
+                
+                // third level
+                > ul li {
+                    
+                    a {
+                        padding-left: 58px;
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    // we've used jquery to wrap each nav link with
+    // a <span> tag so the bottom border will span
+    // the full width of the viewport on small screens
+    span {
+        display: block;
+        border-bottom: 1px solid #dbe1e4;
+    }
+    > span {
+        @media screen and (min-width: $screen-md-min) {
+            border: none;
+        }
+    }
+    
+    a {
+        display: block;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        color: $text-color;
+        text-decoration: none;
+        @include container-fixed;
+        
+        &:hover {
+            color: $brand-primary;
+            cursor: pointer;
+            
+        }
+        
+        &.active {
+            font-family: $mark-pro-bold;
+            color: $text-color;
+            cursor: default;
+        }
+        
+        @media screen and (min-width: $screen-sm-min) {
+            width: $container-sm;
+        }
+        @media screen and (min-width: $screen-md-min) {
+            width: auto;
+            padding-left: 0;
+            padding-right: 0;
+            font-size: ceil(($font-size-base * 0.875));
+        }
+    }
+    
+    &.affix {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 9997;
+    }
+}
+
+#secondary.in,
+#secondary.collapsing {
+    display: block!important;
+}

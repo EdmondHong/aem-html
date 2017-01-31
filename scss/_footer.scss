@@ -1,0 +1,146 @@
+footer[role=contentinfo]{
+    max-width: $body-max-width;
+    color: #c5c5c5;
+    background-color: $footer-color;
+    margin: 0 auto;
+    font-size: ceil(($font-size-base * 0.875));
+    
+    a{
+        color: #c5c5c5;
+        
+        &:hover{
+            color: #fff;
+        }
+    }
+    
+    ul{
+        margin: 0;
+        
+        li {
+            padding: 0;
+
+            + li {
+                margin-left: 15px;
+            }
+        }
+    }
+    
+    // the chevy, buick, gmc, cadillac logo bar
+    .brands {
+        text-align: center;
+        padding: 30px 0;
+        border-bottom: 1px solid #5f656a;
+        
+//        @media screen and (max-width: 320px) { // iphone 5 :-(
+//            zoom: 80%;
+//        }
+        
+        a {
+            display: block;
+            text-indent: -9999px;
+            height: 36px;
+            background-image: url("../img/gm-brand-logos.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+
+            &[href*=chevrolet] {
+                width: 75px;
+            }
+            &[href*=buick] {
+                width: 53px;
+                background-position: -75px;
+            }
+            &[href*=gmc] {
+                width: 85px;
+                background-position: -128px;
+            }
+            &[href*=cadillac] {
+                width: 68px;
+                background-position: -213px;
+            }
+        }
+    }
+    
+    // the links to related websites: dealers, canada, americredit
+    .related {
+        padding: 15px 0;
+        border-bottom: 1px solid #5f656a;
+
+        @media screen and (min-width: $screen-sm) {
+            text-align: center;
+        }
+
+        li {
+            
+            + li {
+                margin-left: 30px;
+            }
+            
+            @media screen and (max-width: $screen-sm) {
+                display: block;
+                margin: 0 !important;
+            }
+        }
+
+        a {
+            display: block;
+            text-decoration: none;
+            padding: 15px 0;
+        }
+    }
+    
+    // the social follow icons: facebook, twitter, linkedin
+    .social {
+        border-bottom: none;
+        padding: 30px 0;
+        
+        a {
+            display: block;
+            text-indent: -9999px;
+            width: 24px;
+            height: 24px;
+            border-radius: 1px;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            &[href*=facebook] {
+                background-image: url("../img/icon-facebook.svg");
+            }
+            &[href*=linkedin] {
+                background-image: url("../img/icon-linkedin.svg");
+            }
+            &[href*=twitter] {
+                background-image: url("../img/icon-twitter.svg");
+            }
+        }
+    }
+    
+    .copyright {
+        font-size: floor(($font-size-base * 0.75));
+        border-bottom: none;
+        
+        ul {
+            padding: 0 0 30px;
+        }
+        
+        li + li{
+            
+            &:before{
+                content: "|";
+            }
+            
+            a{
+                margin-left: 15px;
+            }
+        }
+
+        a{
+            text-decoration: underline;
+        }
+        
+        @media screen and (min-width: $screen-md) {
+            text-align: right;
+            padding-top: 30px;
+        }
+    }
+}

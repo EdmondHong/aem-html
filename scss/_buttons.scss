@@ -1,0 +1,36 @@
+.btn {
+    border-radius: 3px;
+    font-family: $din-pro-bold;
+    font-size: 13px;
+    color: #fff;
+    letter-spacing: 0.75px;
+    line-height: 6px;
+    padding: 16px;
+    background: transparent !important;
+}
+
+.btn-primary {
+    background-color: $brand-primary;
+    
+    &.alt {
+        background-color: #fff !important;
+    }
+    
+}
+
+.btn-secondary {
+    background: transparent;
+    box-shadow: inset 0 0 0 2px $brand-primary;
+    font-size: 13px;
+    color: $brand-primary;
+    
+}
+
+.btn-tertiary {
+    background: transparent;
+    border: 1px solid #C8C8C8;
+    font-family: $mark-pro-medium;
+    font-size: 11px;
+    color: #595959;
+    letter-spacing: 1.25px;
+}

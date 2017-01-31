@@ -1,0 +1,160 @@
+/* Headings, from the GM Financial Style Guide */
+
+// Default H1 heading. Typically placed in the top
+// blue header part of the page and displayed in
+// white.
+
+h1 {
+    font-family: $din-pro-cond-bold;
+    font-size: $font-size-h1;
+    color: #fff;
+    letter-spacing: 0.8px;
+    line-height: 40px;
+    text-transform: uppercase;
+    margin: 0;
+    
+    &:before { // the blue bar preceding the header text
+        margin: 0 0 6px;
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: $alternate-blue;
+
+        @media screen and (min-width: $screen-md) {
+            width: 70px;
+            height: 5px;
+            margin: 0 0 9px;
+        }
+        
+        @media screen and (min-width: $screen-lg) {
+            width: 95px;
+            height: 6px;
+            margin: 0 0 10px;
+        }
+    }
+    
+    @media screen and (min-width: $screen-md) {
+        font-size: ceil(($font-size-h1 * 1.25));
+        letter-spacing: 0.9px;
+        line-height: 50px;
+    }
+    
+    @media screen and (min-width: $screen-lg) {
+        font-size: ceil(($font-size-h1 * 1.5));
+        letter-spacing: 1px;
+        line-height: 60px;
+    }
+}
+
+// Default H2 heading. Typically
+// placed below the top blue
+// header part of the page.
+
+h2 {
+    font-family: $din-pro;
+    font-size: $font-size-h2;
+    color: $headings-color;
+    letter-spacing: 0.6px;
+    line-height: 30px;
+    
+    @media screen and (min-width: $screen-sm) {
+        font-size: ceil(($font-size-h2 * 1.63));
+        line-height: 44px;
+    }
+}
+
+// Default H3 heading style.
+
+h3 {
+    font-family: $din-pro-medium;
+    font-size: $font-size-h3;
+    color: $headings-color;
+    letter-spacing: 0.5px;
+    line-height: 24px;
+    
+    @media screen and (min-width: $screen-sm) {
+        font-family: $din-pro;
+        font-size: ceil(($font-size-h3 * 1.555));
+        letter-spacing: 0.4px;
+        line-height: 32px;
+    }
+}
+
+// Alternate H3 heading style. This is not the
+// default style but instead an alternate style
+// typically used as center aligned text on
+// landing pages. Use intentionally, when in
+// doubt, use the default H3.
+
+h3.alt {
+    font-family: $din-pro-cond-bold;
+    font-size: ceil(($font-size-h3 * 1.222));
+    color: $headings-color;
+    letter-spacing: 1.2px;
+    line-height: 26px;
+    text-transform: uppercase;
+    
+    @media screen and (min-width: $screen-sm) {
+        font-size: ceil(($font-size-h3 * 1.888));
+        line-height: 38px;
+    }
+}
+
+// Default H4 heading style.
+
+h4 {
+    font-family: $din-pro-medium;
+    font-size: $font-size-h4;
+    color: $headings-color;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    
+    @media screen and (min-width: $screen-sm) {
+        font-family: $din-pro;
+        font-size: ceil(($font-size-h4 * 1.222));
+        letter-spacing: 0.27px;
+        line-height: 28px;
+    }
+}
+
+// Default H5 heading style.
+
+h5 {
+    font-family: $mark-pro-medium;
+    font-size: $font-size-h5;
+    color: $headings-color;
+    letter-spacing: 0.3px;
+    line-height: 24px;
+    
+    @media screen and (min-width: $screen-sm) {
+        font-size: ceil(($font-size-h5 * 1.125));
+        letter-spacing: 0.27px;
+        line-height: 28px;
+    }
+}
+
+// Default H6 heading style. This font heading
+// should only be used when it accompanies
+// other 14px text, (which is smaller than the
+// default 16 body font size). Avoid using
+// along with any text larger than 14px.
+
+h6 {
+    font-family: $mark-pro-bold;
+    font-size: $font-size-h6;
+    color: $headings-color;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+
+// Tiny
+// This style is reserved for specific items such
+// as legal disclaimers, copyrights, photo
+// captions, blog post metadata, etc.
+
+small {
+    font-family: $mark-pro-book;
+    letter-spacing: 0;
+    line-height: 18px;
+}

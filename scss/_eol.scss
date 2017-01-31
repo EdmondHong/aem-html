@@ -1,0 +1,198 @@
+.content {
+    
+    
+    .intro {
+        padding-bottom: 10px !important;
+        font-size: 14px; // change on resize?
+        
+        h2, h3 {
+            text-align: center;
+        }
+        
+        ol + div {
+            margin-bottom: 30px;
+        }
+        
+        .video {
+            margin-bottom: 2px;
+            display: inline-block;
+        }
+        
+    }
+    
+    .counter{ // lease end counter
+        
+        strong {
+            font-family: $din-pro-medium;
+        }
+        
+        .vehicle {
+            width: 104px;
+        }
+        
+        .panel {
+            border-radius: 0;
+        }
+        
+        .panel-body {
+            
+            ul {
+                list-style-type: none;
+                padding: 0;
+                font-family: $mark-pro-medium;
+                
+                li {
+                    margin-bottom: 10px;
+                }
+            }
+            
+            a {
+                padding-left: 10px;
+            }
+            
+            span, a {
+                    font-family: $font-family-sans-serif;
+            }
+        }
+    }
+    
+    .timeline { // row of videos
+        padding-top: 20px !important;
+        font-size: 14px; // change on resize?
+        
+        h4, p {
+            text-align: center;
+        }
+    }
+    
+    .video {
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
+
+        span {
+            background-image: url(../img/icon-play.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    
+    .ready {
+        padding-top: 30px !important;
+        font-size: 14px; // change on resize?
+    }
+    
+    .offers { // current offers section
+        background: $light-blue;
+        
+        .vehicle {
+            width: 270px;
+        }
+    }
+    
+    
+    
+    
+    // Frequently Asked Questions
+    .faq {
+        
+         .panel-group {
+            padding-top: 40px;
+            border-bottom: 1px solid #dbe1e4;
+
+            @media screen and (min-width: $screen-md-min) {
+                padding-top: 60px;
+            }
+            @media screen and (min-width: $screen-lg-min) {
+                padding-top: 80px;
+            }
+
+            &:last-child {
+                padding-bottom: 0;
+            }
+
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+        
+        h4, h3 + p {
+            padding-bottom: 20px;
+        }
+        
+        h5 {
+            font-size: 16px; // change on resize?
+        }
+        
+        .panel {
+            border: none;
+            box-shadow: none;
+            padding: 0;
+            margin: 0;
+            
+            .panel-heading {
+                background-color: transparent;
+                padding: 0;
+                border: none;
+                
+                a{
+                    border-top: 1px solid #dbe1e4;
+                    text-decoration: none;
+                    display: block;
+                    padding: 15px 20px 15px 0;
+                    background-repeat: no-repeat;
+                    background-position: center right;
+                    
+                    &[aria-expanded=false] {
+                        background-image: url(../img/icon-plus.svg);
+                    }
+                    
+                    &[aria-expanded=true] {
+                        background-image: url(../img/icon-minus.svg);
+                    }
+                }
+            }
+            
+            .panel-body {
+                font-size: 16px; // change on resize?
+            }
+        }
+    }
+}
+
+// Tabs
+.nav-tabs {
+    
+    a{
+        text-transform: uppercase;
+        font-family: $din-pro-medium;
+    }
+
+    > li.active > a {
+        border-bottom: 3px solid #000 !important;
+        
+        &:hover {
+            border-bottom-color: black !important;
+        }
+    }
+    
+    > li > a:hover {
+        background-color: transparent !important;
+        border-bottom: 3px solid $brand-primary !important;
+        color: $brand-primary;
+    }
+    
+    ul {
+        border: none;
+    }
+}
+.tab-content{
+    border: 1px solid #dbe1e4;
+    padding: 20px 15px;
+
+}
